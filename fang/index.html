@@ -25,6 +25,7 @@
     <script src="//webapi.amap.com/loca?v=1.3.2&key=ee3f38cf88acecc5021c8eeab703caa5"></script>
     <script src="//a.amap.com/Loca/static/manual/example/script/demo.js"></script>
     <script src="./point.js"></script>
+    <script src="./area.js"></script>
     <script src="./red_area.js"></script>
     <script src="./green_area.js"></script>
     <script src="./icon.js"></script>
@@ -40,12 +41,17 @@
             zoom: 11,
             center: [121.485004, 31.130077]
         });
+        area(map);
         red_area(map);
         green_area(map, tc150500);
         
         //电影院
         icon(map, tc080601, 'img/dianyingyuan.png')
+        
+        //超市
         icon(map, tc060400, 'img/chaoshi.png')
+        
+        //小区
         icon(map, tc120302, 'img/xiaoqu.png')
         icon(map, tc120303, 'img/xiaoqu.png')
 
