@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>上海</title>
+    <style>
+        html,
+        body,
+        .container {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map" class="container"></div>
+    <script src="//a.amap.com/Loca/static/dist/jquery.min.js"></script>
+    <script src="//webapi.amap.com/maps?v=1.4.15&key=ee3f38cf88acecc5021c8eeab703caa5"></script>
+    <script src="//webapi.amap.com/loca?v=1.3.2&key=ee3f38cf88acecc5021c8eeab703caa5"></script>
+    <script src="//a.amap.com/Loca/static/manual/example/script/demo.js"></script>
+    <script src="/point.js"></script>
+    <script src="/red_area.js"></script>
+    <script src="/green_area.js"></script>
+    <script src="/icon.js"></script>
+    <script src="/shangquan.js"></script>
+    <script src="/150500.js"></script>
+    <script src="/120302.js"></script>
+    <script src="/120303.js"></script>
+    <script src="/080601-0.js"></script>
+    <script src="/060400-0.js"></script>
+    <script>
+        var map = new AMap.Map('map', {
+            mapStyle: 'amap://styles/whitesmoke',
+            zoom: 11,
+            center: [121.485004, 31.130077]
+        });
+        red_area(map);
+        green_area(map, tc150500);
+        
+        //电影院
+        icon(map, tc080601, 'img/dianyingyuan.png')
+        icon(map, tc060400, 'img/chaoshi.png')
+        icon(map, tc120302, 'img/xiaoqu.png')
+        icon(map, tc120303, 'img/xiaoqu.png')
+
+        //point(map, shangquan, radius=12);
+        
+
+    </script>
+</body>
+
+</html>
