@@ -1,4 +1,4 @@
-function point(map, data, radius=3, color='#14B4C9') {
+function point(map, data, radius=3, color='#7FC97F') {
     var layer = new Loca.ScatterPointLayer({
         eventSupport: true,
         map: map
@@ -46,7 +46,7 @@ function point(map, data, radius=3, color='#14B4C9') {
         },
         selectStyle: {
             radius: radius,
-            color: '#14B4C9'
+            color: color
         }
     });
 
